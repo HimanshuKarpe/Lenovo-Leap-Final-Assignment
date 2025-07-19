@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7f8;
+  color: #333;
+}
+
+nav {
+  background: #0c4a3d;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: url('assets/goa-beach.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5em 2em;
+  background-color: #27ae60;
+  backdrop-filter: brightness(0.5);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #0c4a3d;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 1em;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #0c4a3d;
+  color: white;
+}
+
+section.about, section.resources, section.learn {
+  padding: 3em 2em;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  margin-top: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section.about h2,
+section.learn h2,
+section.resources h2 {
+  color: #0c4a3d;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+footer {
+  background: #0c4a3d;
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+  margin-top: 3em;
+  border-top: 4px solid #2ecc71;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.image-row img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
