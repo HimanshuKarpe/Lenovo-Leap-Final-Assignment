@@ -1,61 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <title>Waste Education - Clean Goa</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="An awareness website on solving waste management challenges in Goa using technology." />
+        <meta name="keywords" content="waste management, Goa, environment, SDG, recycling, climate action" />
+        <meta name="author" content="Himanshu Karpe" />
+
+        <title>Waste Education - Clean Goa</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
-    <header>
-    <nav>
-        <h1>Clean Goa</h1>
-        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="learn.html">Learn</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        </ul>
-    </nav>
-    </header>
+        <div id="preloader"></div>
 
-    <main>
-        <section class="learn">
-            <h2>Types of Waste</h2>
-            <div class="image-row">
-                <img src="assets/waste-types.jpg" alt="Types of Waste" />
-            </div>
-
-            <p>Different types of waste require different disposal methods. Understanding them helps prevent pollution and improves recycling efficiency.</p>
-    
+        <header>
+        <nav>
+            <h1>Clean Goa</h1>
             <ul>
-                <li><strong>Organic:</strong> Vegetable peels, food waste – compostable</li>
-                <li><strong>Dry Waste:</strong> Paper, plastic, glass – recyclable</li>
-                <li><strong>Hazardous:</strong> Batteries, bulbs, e-waste – needs special disposal</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            
+            <button id="toggle-dark" title="Toggle Dark Mode">🌓</button>
             </ul>
+        </nav>
+        </header>
 
-            <h2>How to Segregate</h2>
-            <div class="image-row">
-                <img src="assets/segregation-bins.png" alt="Segregation" />
-            </div>
-            <p>Segregate at home into 3 bins: green (organic), blue (dry), and red (hazardous).</p>
+        <main>
 
-            <h2>Eco-Friendly Disposal Tips</h2>
-            <ul>
-                <li>🏡 Try composting at home using a compost bin</li>
-                <li>♻️ Reuse jars, bottles, paper for crafts and storage</li>
-                <li>📦 Donate reusable items instead of throwing them</li>
-                <li>💻 Use e-waste drives for old electronics</li>
-            </ul>
-            <div class="image-row">
-                <img src="assets/composting.jpg" alt="Composting" />
-            </div>
-        </section>
+            <section class="stats" class="fade-in">
+                <div>
+                    <h3 id="cleanupCount">0</h3>
+                    <p>Clean-up Drives</p>
+                </div>
+                <div>
+                    <h3 id="wasteKg">0</h3>
+                    <p>Kg Waste Collected</p>
+                </div>
+            </section>
 
-    </main>
+            <section class="learn" class="fade-in">
+                <h2>Types of Waste</h2>
+                <div class="image-row">
+                    <img src="Images/Types of Wastes.png" alt="Types of Waste" />
+                </div>
 
-    <footer>
-    <p>&copy; 2025 Clean Goa Initiative</p>
-    </footer>
+                <p>Different types of waste require different disposal methods. Understanding them helps prevent pollution and improves recycling efficiency.</p>
+        
+                <ul>
+                    <li><strong>Organic:</strong> Vegetable peels, food waste – compostable</li>
+                    <li><strong>Dry Waste:</strong> Paper, plastic, glass – recyclable</li>
+                    <li><strong>Hazardous:</strong> Batteries, bulbs, e-waste – needs special disposal</li>
+                </ul>
 
+                <h2>How to Segregate</h2>
+                <div class="image-row">
+                    <img src="Images/Waste-Segregation.png" alt="Segregation" />
+                </div>
+                <p>Segregate at home into 3 bins: green (organic), blue (dry), and red (hazardous).</p>
+
+                <h2>Eco-Friendly Disposal Tips</h2>
+                <ul>
+                    <li>🏡 Try composting at home using a compost bin</li>
+                    <li>♻️ Reuse jars, bottles, paper for crafts and storage</li>
+                    <li>📦 Donate reusable items instead of throwing them</li>
+                    <li>💻 Use e-waste drives for old electronics</li>
+                </ul>
+                <div class="image-row">
+                    <img src="Images/Composting.jpg" alt="Composting" />
+                </div>
+            </section>
+
+            <section class="quiz" class="fade-in">
+                <h2>🧠 Quick Waste Awareness Quiz</h2>
+                <p>Which bin would you throw used batteries in?</p>
+                <select id="quizAnswer">
+                    <option value="">--Select--</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                </select>
+                <button onclick="checkAnswer()">Submit</button>
+                <p id="quizFeedback"></p>
+            </section>
+
+
+        </main>
+
+        <footer>
+        <p>&copy; <span id="year"></span> Clean Goa Initiative</p>
+        </footer>
+
+        <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">⬆️</button>
+        <button id="toggle-dark" title="Toggle Dark Mode">🌓</button>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Page Not Found - Clean Goa</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: #f4f7f8;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            }
+
+            .error-container {
+            max-width: 600px;
+            padding: 2em;
+            }
+
+            .error-code {
+            font-size: 6rem;
+            color: #0c4a3d;
+            }
+
+            .error-message {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            }
+
+            .home-link {
+            display: inline-block;
+            text-decoration: none;
+            background: #0c4a3d;
+            color: white;
+            padding: 0.75em 1.5em;
+            border-radius: 5px;
+            transition: background 0.3s;
+            }
+
+            .home-link:hover {
+            background: #2ecc71;
+            }
+
+            .emoji {
+            font-size: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="error-container">
+            <div class="emoji">🚫</div>
+            <div class="error-code">404</div>
+            <div class="error-message">Oops! The page you're looking for doesn't exist.</div>
+            <a href="index.html" class="home-link">Go Back Home</a>
+        </div>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Clean Goa Initiative</p>
+        </footer>
+    </body>
+</html>
